@@ -2,6 +2,8 @@
 
 Submitted by **Harman Singh**
 
+**Live demo:** [1fi-liard.vercel.app/shop](https://1fi-liard.vercel.app/shop)
+
 ## What this is
 
 The Shop page now has three options: **Top Brands**, **Nearby Stores**, and **1Fi Marketplace**.
@@ -30,8 +32,28 @@ the existing 1Fi app's stack and design language (colors, spacing, tabs, bottom 
 - CTA to proceed with the selected plan through to a checkout confirmation
 - Loading, empty, and error states throughout
 
-## Data
+## Project structure
+
+The repo is organized into clear `frontend` and `backend` folders for readability. `app/`
+stays at the root only because Next.js requires it there for routing — it's a thin layer
+that wires the two together.
+
+```
+backend/            # data & business logic
+  data/              # product, brand, and store data (swap for a real DB later)
+  types.ts           # shared data types
+  emi.ts             # EMI calculation logic
+
+frontend/           # UI
+  components/         # all React components
+  hooks/              # React Query data-fetching hooks
+  lib/                # API client, utils
+
+app/                # Next.js routing only
+  api/                 # route handlers — call into backend/, expose it as JSON over HTTP
+  shop/, dashboard/, ...  # pages — call into frontend/ components and hooks
+```
 
 All product, brand, and store data is served through mock API route handlers
-(`app/api/**`) instead of being hardcoded into components, so it can be swapped for a
-real backend without touching the UI.
+(`app/api/**`, backed by `backend/data/**`) instead of being hardcoded into components,
+so `backend/` can be swapped for a real database/service without touching `frontend/`.

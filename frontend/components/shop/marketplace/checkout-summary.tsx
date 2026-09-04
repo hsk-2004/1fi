@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CheckCircle2, PackageX } from "lucide-react";
-import { useProduct } from "@/hooks/use-shop-data";
-import { formatINR } from "@/lib/utils";
-import { monthlyAmount } from "@/lib/emi";
+import { useProduct } from "@/frontend/hooks/use-shop-data";
+import { formatINR } from "@/frontend/lib/utils";
+import { monthlyAmount } from "@/backend/emi";
 import { DetailHeader } from "./detail-header";
 import { EmptyState } from "../empty-state";
 

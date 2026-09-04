@@ -1,6 +1,6 @@
-import type { EmiPlan } from "@/lib/types";
-import { formatINR } from "@/lib/utils";
-import { monthlyAmount } from "@/lib/emi";
+import type { EmiPlan } from "@/backend/types";
+import { formatINR } from "@/frontend/lib/utils";
+import { monthlyAmount } from "@/backend/emi";
 
 export function EmiPlanSelector({
   plans,

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { products } from "@/lib/mock/products";
-import type { ProductSummary } from "@/lib/types";
+import { products } from "@/backend/data/products";
+import type { ProductSummary } from "@/backend/types";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

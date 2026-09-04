@@ -1,4 +1,4 @@
-import type { Brand } from "@/lib/types";
+import type { Brand } from "@/backend/types";
 
 const CDN = "https://cdn.1fi.in/merchants";
 

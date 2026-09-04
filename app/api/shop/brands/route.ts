@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { brands } from "@/lib/mock/brands";
+import { brands } from "@/backend/data/brands";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

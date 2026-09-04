@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { ProductSummary } from "@/lib/types";
-import { formatINR } from "@/lib/utils";
+import type { ProductSummary } from "@/backend/types";
+import { formatINR } from "@/frontend/lib/utils";
 
 export function ProductCard({ product }: { product: ProductSummary }) {
   return (

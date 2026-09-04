@@ -1,4 +1,4 @@
-import type { NearbyStore } from "@/lib/types";
+import type { NearbyStore } from "@/backend/types";
 
 export const nearbyStores: NearbyStore[] = [
   {

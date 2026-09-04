@@ -1,4 +1,4 @@
-import type { ProductVariant } from "@/lib/types";
+import type { ProductVariant } from "@/backend/types";
 
 export function VariantSelector({
   label,

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { nearbyStores, nearbyStoreCities } from "@/lib/mock/stores";
+import { nearbyStores, nearbyStoreCities } from "@/backend/data/stores";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

@@ -6,8 +6,8 @@ import { SearchInput } from "./search-input";
 import { EmptyState } from "./empty-state";
 import { LocationDrawer } from "./location-drawer";
 import { InitialsAvatar } from "./initials-avatar";
-import { useStores } from "@/hooks/use-shop-data";
-import { useDebouncedValue } from "@/hooks/use-debounced-value";
+import { useStores } from "@/frontend/hooks/use-shop-data";
+import { useDebouncedValue } from "@/frontend/hooks/use-debounced-value";
 
 export function NearbyStoresSection() {
   const [query, setQuery] = useState("");

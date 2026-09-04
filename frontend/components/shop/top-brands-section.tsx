@@ -5,8 +5,8 @@ import { Search } from "lucide-react";
 import { SearchInput } from "./search-input";
 import { EmptyState } from "./empty-state";
 import { LogoImage } from "./logo-image";
-import { useBrands } from "@/hooks/use-shop-data";
-import { useDebouncedValue } from "@/hooks/use-debounced-value";
+import { useBrands } from "@/frontend/hooks/use-shop-data";
+import { useDebouncedValue } from "@/frontend/hooks/use-debounced-value";
 
 export function TopBrandsSection() {
   const [query, setQuery] = useState("");

@@ -1,4 +1,4 @@
-import type { Product } from "@/lib/types";
+import type { Product } from "@/backend/types";
 
 function emiPlansFor(months: number[]): Product["emiPlans"] {
   return months.map((m) => ({

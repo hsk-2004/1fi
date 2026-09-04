@@ -1,4 +1,4 @@
-import { ProductDetail } from "@/components/shop/marketplace/product-detail";
+import { ProductDetail } from "@/frontend/components/shop/marketplace/product-detail";
 
 export default async function ProductDetailPage({
   params,

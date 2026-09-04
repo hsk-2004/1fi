@@ -5,8 +5,8 @@ import { PackageSearch } from "lucide-react";
 import { SearchInput } from "../search-input";
 import { EmptyState } from "../empty-state";
 import { ProductCard } from "./product-card";
-import { useProducts } from "@/hooks/use-shop-data";
-import { useDebouncedValue } from "@/hooks/use-debounced-value";
+import { useProducts } from "@/frontend/hooks/use-shop-data";
+import { useDebouncedValue } from "@/frontend/hooks/use-debounced-value";
 
 export function MarketplaceSection() {
   const [query, setQuery] = useState("");

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { House, Store, ReceiptIndianRupee, ChartNoAxesCombined, User } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/frontend/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "Home", icon: House },

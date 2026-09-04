@@ -4,7 +4,7 @@ import {
   fetchStores,
   fetchProducts,
   fetchProduct,
-} from "@/lib/api-client";
+} from "@/frontend/lib/api-client";
 
 export function useBrands(query: string) {
   return useQuery({

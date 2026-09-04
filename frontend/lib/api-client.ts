@@ -1,4 +1,4 @@
-import type { Brand, NearbyStore, Product, ProductSummary } from "@/lib/types";
+import type { Brand, NearbyStore, Product, ProductSummary } from "@/backend/types";
 
 async function getJSON<T>(url: string): Promise<T> {
   const res = await fetch(url);

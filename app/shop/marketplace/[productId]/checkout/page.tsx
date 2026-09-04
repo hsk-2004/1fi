@@ -1,4 +1,4 @@
-import { CheckoutSummary } from "@/components/shop/marketplace/checkout-summary";
+import { CheckoutSummary } from "@/frontend/components/shop/marketplace/checkout-summary";
 
 export default async function CheckoutPage({
   params,
