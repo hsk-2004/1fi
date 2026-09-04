@@ -9,7 +9,8 @@ function emiPlansFor(months: number[]): Product["emiPlans"] {
   }));
 }
 
-const img = (seed: string) => `https://picsum.photos/seed/${seed}/600/600`;
+const commonsImg = (fileName: string) =>
+  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=600`;
 
 export const products: Product[] = [
   {
@@ -17,7 +18,7 @@ export const products: Product[] = [
     name: "iPhone 15",
     brand: "Apple Premium Reseller",
     category: "Mobiles",
-    image: img("iphone-15"),
+    image: commonsImg("Back of iPhone 15.jpg"),
     basePrice: 79900,
     mrp: 79900,
     rating: 4.6,
@@ -41,7 +42,7 @@ export const products: Product[] = [
     name: "MacBook Air M2",
     brand: "Apple Premium Reseller",
     category: "Laptops",
-    image: img("macbook-air-m2"),
+    image: commonsImg("M2 Macbook Air Starlight model.jpg"),
     basePrice: 114900,
     mrp: 119900,
     rating: 4.8,
@@ -64,7 +65,7 @@ export const products: Product[] = [
     name: "Neo QLED 4K Smart TV",
     brand: "Croma",
     category: "Televisions",
-    image: img("neo-qled-tv"),
+    image: commonsImg("Samsung QLED TV 8K - 75 inches - 2018-11-02.jpg"),
     basePrice: 89999,
     mrp: 104999,
     rating: 4.4,
@@ -87,7 +88,7 @@ export const products: Product[] = [
     name: "Sony WH-1000XM5",
     brand: "Croma",
     category: "Audio",
-    image: img("sony-headphones"),
+    image: commonsImg("Sony-WH-1000XM3-kabellose-Bluetooth-Noise-Cancelling-Kopfhoerer.jpg"),
     basePrice: 29990,
     mrp: 34990,
     rating: 4.7,
@@ -110,7 +111,7 @@ export const products: Product[] = [
     name: "LG 260L Frost Free Refrigerator",
     brand: "Croma",
     category: "Appliances",
-    image: img("lg-refrigerator"),
+    image: commonsImg("LG refrigerator.jpg"),
     basePrice: 27990,
     mrp: 32990,
     rating: 4.3,
@@ -133,7 +134,7 @@ export const products: Product[] = [
     name: "Prestige Induction Cooktop",
     brand: "Prestige",
     category: "Kitchen Appliances",
-    image: img("induction-cooktop"),
+    image: commonsImg("Eupa TSI-IH1880.jpg"),
     basePrice: 3299,
     mrp: 3999,
     rating: 4.2,
@@ -156,7 +157,7 @@ export const products: Product[] = [
     name: "Dyson V15 Detect Vacuum",
     brand: "Croma",
     category: "Home Care",
-    image: img("dyson-vacuum"),
+    image: commonsImg("Dyson Cyclone V10 Absolute cordless stick vacuum.jpg"),
     basePrice: 62900,
     mrp: 65900,
     rating: 4.5,
@@ -179,7 +180,7 @@ export const products: Product[] = [
     name: "boAt Wave Pro Smartwatch",
     brand: "Croma",
     category: "Wearables",
-    image: img("boat-smartwatch"),
+    image: commonsImg("Smartwatch-828786.jpg"),
     basePrice: 2499,
     mrp: 4990,
     rating: 4.1,
