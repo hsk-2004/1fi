@@ -8,7 +8,8 @@ export interface Brand {
 export interface NearbyStore {
   id: string;
   name: string;
-  logo: string;
+  initials: string;
+  color: string;
   address: string;
   city: string;
   distanceKm: number;

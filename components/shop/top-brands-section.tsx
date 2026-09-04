@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import { SearchInput } from "./search-input";
 import { EmptyState } from "./empty-state";
+import { LogoImage } from "./logo-image";
 import { useBrands } from "@/hooks/use-shop-data";
 import { useDebouncedValue } from "@/hooks/use-debounced-value";
 
@@ -63,14 +64,8 @@ export function TopBrandsSection() {
             type="button"
             className="flex w-full cursor-pointer items-center gap-3 rounded-[18px] border border-zinc-200 bg-white p-3.5 text-left shadow-[0_2px_6px_rgba(20,14,50,0.04)] transition-shadow hover:shadow-[0_6px_16px_rgba(20,14,50,0.06)]"
           >
-            <div className="flex h-16 w-16 relative overflow-hidden rounded-xl border border-gray-200 items-center justify-center shrink-0 mr-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt={brand.name}
-                loading="lazy"
-                className="object-cover absolute inset-0 h-full w-full"
-                src={brand.logo}
-              />
+            <div className="relative mr-2 flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200">
+              <LogoImage src={brand.logo} alt={brand.name} />
             </div>
             <div className="min-w-0 flex-1">
               <h3 className="truncate text-[18px] font-semibold leading-[1.25] tracking-[-0.012em] text-gray-900">

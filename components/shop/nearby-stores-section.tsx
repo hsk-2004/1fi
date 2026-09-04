@@ -5,6 +5,7 @@ import { MapPin, ChevronDown } from "lucide-react";
 import { SearchInput } from "./search-input";
 import { EmptyState } from "./empty-state";
 import { LocationDrawer } from "./location-drawer";
+import { InitialsAvatar } from "./initials-avatar";
 import { useStores } from "@/hooks/use-shop-data";
 import { useDebouncedValue } from "@/hooks/use-debounced-value";
 
@@ -26,10 +27,10 @@ export function NearbyStoresSection() {
         <button
           type="button"
           onClick={() => setLocationDrawerOpen(true)}
-          className="flex items-center gap-1 rounded-full border border-[#ece5ff] bg-[#f5f0ff] px-3 py-1.5 text-sm font-semibold text-[#712CDC]"
+          className="flex items-center gap-0.5 rounded-full border border-[#dcd2ff] bg-white px-2 py-0.5 text-[13px] font-semibold text-[#5f2fd1] shadow-[0_1px_2px_rgba(20,14,50,0.04)] transition-colors hover:bg-[#f7f3ff] hover:border-[#cdbdff]"
         >
           {city}
-          <ChevronDown className="h-3.5 w-3.5" />
+          <ChevronDown className="h-3 w-3" />
         </button>
       </div>
 
@@ -80,22 +81,16 @@ export function NearbyStoresSection() {
             key={store.id}
             className="flex items-center gap-3 rounded-[18px] border border-zinc-200 bg-white p-3.5 shadow-[0_2px_6px_rgba(20,14,50,0.04)]"
           >
-            <div className="flex h-16 w-16 relative overflow-hidden rounded-xl border border-gray-200 items-center justify-center shrink-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt={store.name}
-                loading="lazy"
-                className="object-cover absolute inset-0 h-full w-full"
-                src={store.logo}
-              />
+            <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200">
+              <InitialsAvatar initials={store.initials} color={store.color} />
             </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-center justify-between gap-2">
                 <h3 className="truncate text-[16px] font-semibold leading-[1.25] tracking-[-0.012em] text-gray-900">
                   {store.name}
                 </h3>
-                <span className="shrink-0 rounded-full bg-[#f5f0ff] px-2 py-0.5 text-[11px] font-semibold text-[#712CDC]">
-                  {store.distanceKm} KM
+                <span className="shrink-0 rounded-full bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-600">
+                  {store.distanceKm.toFixed(1)} KM
                 </span>
               </div>
               <p className="mt-1 line-clamp-2 text-[12.5px] leading-[1.45] text-gray-500">

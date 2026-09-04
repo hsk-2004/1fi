@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 1Fi Marketplace — SDE Intern Assignment
 
-## Getting Started
+Submitted by **Harman Singh**
 
-First, run the development server:
+## What this is
+
+The Shop page now has three options: **Top Brands**, **Nearby Stores**, and **1Fi Marketplace**.
+The Marketplace is the focus of this assignment and is fully implemented; Top Brands and
+Nearby Stores are also built out for a complete experience.
+
+## Running it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/shop](http://localhost:3000/shop).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js (App Router), TypeScript, Tailwind CSS, React Query, lucide-react, vaul — matching
+the existing 1Fi app's stack and design language (colors, spacing, tabs, bottom nav).
 
-## Learn More
+## 1Fi Marketplace
 
-To learn more about Next.js, take a look at the following resources:
+- Product listing with images, pricing, and variants
+- Product detail page with variant selection and EMI plan selection
+- Live monthly EMI recalculation based on price + selected plan
+- CTA to proceed with the selected plan through to a checkout confirmation
+- Loading, empty, and error states throughout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All product, brand, and store data is served through mock API route handlers
+(`app/api/**`) instead of being hardcoded into components, so it can be swapped for a
+real backend without touching the UI.
